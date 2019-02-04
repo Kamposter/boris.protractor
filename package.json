@@ -1,5 +1,5 @@
 {
-  "name": "testappexampleautomationtest",
+  "name": "boris.protractor",
   "version": "1.0.0",
   "description": "Automated tests for test Application",
   "main": "conf.js",
