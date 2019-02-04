@@ -14,5 +14,9 @@
   },
   "dependencies": {
     "jasmine-allure-reporter": "^1.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kamposter/boris.protractor.git"
+  },
 }
