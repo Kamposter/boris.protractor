@@ -13,7 +13,7 @@
     "allure-commandline": "^2.9.0"
   },
   "dependencies": {
-    "jasmine-allure-reporter": "^1.0.2"
+    "jasmine-allure-reporter": "^1.0.2",
     "jasmine": "2.8.0",
     "jasminewd2": "^2.1.0",
     "selenium-webdriver": "3.6.0",
