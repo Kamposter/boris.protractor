@@ -5,7 +5,7 @@ describe ('Form input fields validation', function(){
     var pageModal = require('../PO/pageModal');
     
     const fs = require('fs');
-    let rawdata = fs.readFileSync('../Fixtures/testData.json');
+    let rawdata = fs.readFileSync('.\\Fixtures\\testData.json');
     let web = JSON.parse(rawdata);
     let name1 = web["name1"];
     let name2 = web["name2"];
