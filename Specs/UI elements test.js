@@ -1,9 +1,8 @@
-var util = require('util');
-
 
 describe('UI elements layout', function () {
     var regForm = require('../PO/regForm.js');
     var usersList = require('../PO/usersList.js');
+    
     browser.waitForAngularEnabled(false);
     browser.manage().timeouts().implicitlyWait(5000);
 

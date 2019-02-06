@@ -10,7 +10,7 @@ exports.config = {
     // Spec patterns are relative to the configuration file location passed
     // to protractor (in this example conf.js).
     // They may include glob patterns.
-    specs: ['./Specs/UI elements test.js','./Specs/Forms validation test.js','./Specs/New user add test.js'],
+    specs: ['./Specs/UI elements test.js','./Specs/Forms validation test.js','./Specs/New user add test.js','./Specs/Form input fields validation on user Edit.js', './Specs/Edit user flow.js', './Specs/pageModal.js'],
     framework: 'jasmine2',
     // Options to be passed to Jasmine-node.
     jasmineNodeOpts: {

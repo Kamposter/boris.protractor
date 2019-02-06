@@ -1,8 +1,17 @@
-var util = require('util');
 
 describe ('Form input fields validation', function(){
     var regForm = require('../PO/regForm.js');
     var usersList = require('../PO/usersList.js');
+    var pageModal = require('../PO/pageModal');
+    
+    const fs = require('fs');
+    let rawdata = fs.readFileSync('..\\boris.protractor\\Fixtures\\testData.json');
+    let web = JSON.parse(rawdata);
+    let name1 = web["name1"];
+    let name2 = web["name2"];
+    let validName = web["validName"];
+    
+    
     browser.waitForAngularEnabled(false);
     browser.manage().timeouts().implicitlyWait(5000);
 
@@ -12,7 +21,7 @@ describe ('Form input fields validation', function(){
     });
 
     it('Check Name form validation for 1 letter', function(){
-        regForm.nameField.sendKeys('a');
+        regForm.nameField.sendKeys(name1);
         expect(regForm.nameField.getCssValue('background-color')).toEqual('rgba(255, 255, 0, 1)');
     });
 
@@ -29,22 +38,22 @@ describe ('Form input fields validation', function(){
     });
 
     it('Check Name form validation for two letters', function(){
-        regForm.nameField.sendKeys('ab');
+        regForm.nameField.sendKeys(name2);
         expect(regForm.nameField.getCssValue('background-color')).toEqual('rgba(255, 255, 0, 1)');
     });
 
     it('Check the Name form validation for correct value', function(){
         regForm.nameField.clear();
-        regForm.nameField.sendKeys('abc');
+        regForm.nameField.sendKeys(validName);
         expect(regForm.nameField.getCssValue('background-color')).toEqual('rgba(144, 238, 144, 1)');
     });
 
-    //email validation !!
+    //No other forms check due to requirements: check validation only for Name field
 
     it('Reset all Forms', function(){
         regForm.refreshBtn.click();
         expect(regForm.nameField.getCssValue('background-color')).toEqual('rgba(255, 255, 255, 1)');
 
     });
-
+    
 });
