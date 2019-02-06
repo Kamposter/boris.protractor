@@ -6,7 +6,7 @@ describe('User Remove flow', function () {
     var pageModal = require('../PO/pageModal.js');
     
     const fs = require('fs');
-    let rawdata = fs.readFileSync('..\\boris.protractor\\Fixtures\\testData.json');
+    let rawdata = fs.readFileSync('../Fixtures/testData.json');
     let web = JSON.parse(rawdata);
     let userName = web["userName"];
     let userEmail = web["userEmail"];
